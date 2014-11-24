@@ -1,0 +1,58 @@
+fieldset {
+    border-color: forestgreen;
+    border-width: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+fieldset legend {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 3px;
+}
+
+fieldset fieldset {
+    border-color: forestgreen;
+    border-width: 1px;
+    margin: 5px;
+}
+fieldset fieldset legend {
+    font-weight: normal;
+}
+
+fieldset fieldset label {
+    display: block;
+    width: auto;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+input text {
+    width: 250px;
+}
+
+input {
+    alignment-baseline: central;
+    alignment-adjust:middle; 
+}
+
+div{
+    column-count: 2;
+    -moz-column-count: 3; /* Firefox */
+}
+
+label {
+    width: 100px; 
+}
+fieldset fieldset label {
+    margin-left: 100px;
+}
+
+//Not sure what this does, if anything
+.div { overflow: hidden; }
+.column { float: left; }
+.half { width: 50%; }
+.last { float: none; width: auto; }
