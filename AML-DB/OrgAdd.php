@@ -11,7 +11,7 @@
     </head>
 
     <!--TODO: fix this-->
-    <form action="myform.php" method="post">
+    <form action="OrgAdd.php" method="post">
 
         <fieldset>
             <legend>Add Organization</legend>

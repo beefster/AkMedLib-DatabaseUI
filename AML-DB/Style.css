@@ -30,17 +30,17 @@ em {
     font-style: normal;
 }
 
-input text {
+input {
     width: 250px;
 }
 
 input {
-    alignment-baseline: central;
-    alignment-adjust:middle; 
+    width: 64px;
+    
 }
 
 div{
-    column-count: 2;
+    column-count: 3;
     -moz-column-count: 3; /* Firefox */
 }
 

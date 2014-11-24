@@ -36,6 +36,23 @@ Include buttons for add, edit, and delete
             </fieldset>
         </fieldset>
 
+        <fieldset>
+            
+            <?php 
+            
+                //TODO: Do necessary query based on form input
+            
+            
+            
+                echo "";//whatever query
+            
+            
+            
+            ?>
+            
+        </fieldset>
+        
+        
     </form>
 
     
