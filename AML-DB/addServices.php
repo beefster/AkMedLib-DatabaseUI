@@ -36,7 +36,7 @@ echo "</select>";// Closing of list box
   { $errors[] = 'Enter a valid service code.' ; }
   else
   { $sC = mysqli_real_escape_string( $dbc, trim( $_POST[ 'serviceCode' ] ) ) ; }
-                                   ]
+
   if ( empty( $_POST[ 'quantityFilled' ] ) )
   { $errors[] = 'Enter a valid fill quantity.' ; }
   else
@@ -90,6 +90,7 @@ echo "</select>";// Closing of list box
 ?>
 
 <h1>Add Services</h1>
+<p><a href="/services.php">Back to services.</a></p>
 <form action="register.php" method="post">
 <p>Services ID: <input type="text" name="servicesID" size="25" value="<?php if (isset($_POST['servicesID'])) echo $_POST['servicesID']; ?>"></p>
 <p>Date Filled: <input type="date" name="dateFilled" size="25" value="<?php if (isset($_POST['dateFilled'])) echo $_POST['dateFilled']; ?>"></p>
