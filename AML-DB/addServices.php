@@ -84,14 +84,17 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
 <h1>Add Services</h1>
 <p><a href="/services.php">Back to services.</a></p>
 <form action="services.php" method="post">
-<p>Services ID: <input type="text" name="servicesID" size="25" value="<?php if (isset($_POST['servicesID'])) echo $_POST['servicesID']; ?>"></p>
-<p>Date Filled: <input type="date" name="dateFilled" size="25" value="<?php if (isset($_POST['dateFilled'])) echo $_POST['dateFilled']; ?>"></p>
-<p>Identifier: <input type="identifier" name="email" size="25" value="<?php if (isset($_POST['identifier'])) echo $_POST['identifier']; ?>"></p>
-<p>Service Code: <input type="text" name="serviceCode" size="25" value="<?php if (isset($_POST['serviceCode'])) echo $_POST['serviceCode']; ?>"></p>
+<p>Services ID:     <input type="text" name="servicesID" size="25" value="<?php if (isset($_POST['servicesID'])) echo $_POST['servicesID']; ?>"></p>
+<p>Date Filled:     <input type="date" name="dateFilled" size="25" value="<?php if (isset($_POST['dateFilled'])) echo $_POST['dateFilled']; ?>"></p>
+<p>Identifier:      <input type="identifier" name="email" size="25" value="<?php if (isset($_POST['identifier'])) echo $_POST['identifier']; ?>"></p>
+<p>Service Code:    <input type="text" name="serviceCode" size="25" value="<?php if (isset($_POST['serviceCode'])) echo $_POST['serviceCode']; ?>"></p>
 <p>Quantity Filled: <input type="text" name="quantityFilled" size="25" value="<?php if (isset($_POST['quantityFilled'])) echo $_POST['quantityFilled']; ?>"></p>
-<p>Unit Price: <input type="double" name="unitPrice" size="25" value="<?php if (isset($_POST['unitPrice'])) echo $_POST['unitPrice']; ?>"></p>
-<p>Total: <input type="text" name="total" size="25" value="<?php if (isset($_POST['total'])) echo $_POST['total']; ?>"></p>
-<p>Paid: <input type="double" name="double" size="25" value="<?php if (isset($_POST['paid'])) echo $_POST['paid']; ?>"></p>
-<p>Date Entered: <input type="date" name="dateEntered" size="25" value="<?php if (isset($_POST['dateEntered'])) echo $_POST['dateEntered']; ?>"></p>
+<p>Unit Price:      <input type="double" name="unitPrice" size="25" value="<?php if (isset($_POST['unitPrice'])) echo $_POST['unitPrice']; ?>"></p>
+<p>Total:           <input type="text" name="total" size="25" value="<?php if (isset($_POST['total'])) echo $_POST['total']; ?>"></p>
+<p>Paid:            <select name="paid" size ="2">
+<option name="paid" value="<?php if (isset($_POST['Yes'])) echo $_POST['Yes']; ?>">Yes</option>
+<option name="paid" value="<?php if (isset($_POST['No'])) echo $_POST['No']; ?>">No</option>
+</select></p>
+<p>Date Entered:    <input type="date" name="dateEntered" size="25" value="<?php if (isset($_POST['dateEntered'])) echo $_POST['dateEntered']; ?>"></p>
 <p><input type="submit" value="Add Record"></p>
 </form>
