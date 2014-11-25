@@ -1,7 +1,6 @@
 <?php
 
 $page_title = 'Services' ;
-include ( 'includes/header.html' ) ;
 
 
 if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
@@ -9,13 +8,6 @@ if ( $_SERVER[ 'REQUEST_METHOD' ] == 'POST' )
   require ('../connect_db.php');
 
   $errors = array();
-
-  $sql="SELECT name,id FROM student order by name";
-echo "<select name=student value=''>Student Name</option>";
-foreach ($dbo->query($sql) as $row){
-echo "<option value=$row[id]>$row[name]</option>";
-}
-echo "</select>";// Closing of list box
 
   if ( empty( $_POST[ 'servicesID' ] ) )
   { $errors[] = 'Enter a valid service.' ; }
@@ -64,10 +56,10 @@ echo "</select>";// Closing of list box
 
   if ( empty( $errors ) )
   {
-    $q = "INSERT INTO table (variable1, variable2) VALUES ('$sID', '$dF', '$i', '$sC', '$qF', '$uP', '$t', '$p', '$dE', NOW() )";
+    $q = "INSERT INTO Services (ServicesID, DateFilled, Identifier, ServiceCode, QTYFilled, UnitPrice, Total, Paid, DateEntered) VALUES ('$sID', '$dF', '$i', '$sC', '$qF', '$uP', '$t', '$p', '$dE', NOW() )";
     $r = @mysqli_query ( $dbc, $q ) ;
     if ($r)
-    { echo '<h1>Registered!</h1><p>You are now registered.</p><p><a href="login.php">Login</a></p>'; }
+    { echo '<h1>Service added!</h1><p>The service has been added.</p><p><a href="services.php">Back to services</a></p>'; }
 
     # Close database connection.
     mysqli_close($dbc);
@@ -91,7 +83,7 @@ echo "</select>";// Closing of list box
 
 <h1>Add Services</h1>
 <p><a href="/services.php">Back to services.</a></p>
-<form action="register.php" method="post">
+<form action="services.php" method="post">
 <p>Services ID: <input type="text" name="servicesID" size="25" value="<?php if (isset($_POST['servicesID'])) echo $_POST['servicesID']; ?>"></p>
 <p>Date Filled: <input type="date" name="dateFilled" size="25" value="<?php if (isset($_POST['dateFilled'])) echo $_POST['dateFilled']; ?>"></p>
 <p>Identifier: <input type="identifier" name="email" size="25" value="<?php if (isset($_POST['identifier'])) echo $_POST['identifier']; ?>"></p>
@@ -103,9 +95,3 @@ echo "</select>";// Closing of list box
 <p>Date Entered: <input type="date" name="dateEntered" size="25" value="<?php if (isset($_POST['dateEntered'])) echo $_POST['dateEntered']; ?>"></p>
 <p><input type="submit" value="Add Record"></p>
 </form>
-
-<?php
-
-include ( 'includes/footer.html' ) ;
-
-?>
