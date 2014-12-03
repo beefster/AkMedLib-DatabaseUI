@@ -10,23 +10,20 @@
         <title> Organization </title>
     </head>
 
-     <!--TODO: build navigation section-->
+    <!--TODO: build navigation section-->
     <nav>
-        
-        
-        
-        
-        
-        
-        
+
+        <!--TODO: High-level navigation-->
+
+
+        <!--Navigate within Organizations pages-->
+
+
     </nav>
-    
-    
-    
-    
-    
+
+
     <!--TODO: fix this-->
-    <form action="myform.php" method="post">
+    <form action="myform.php" method="POST">
 
         <fieldset>
             <legend>Edit Organization</legend>
@@ -34,27 +31,29 @@
             <div id ="top">
                 <fieldset>
                     <legend>Organization</legend>
-                    Name: <input type="text" name="Org_Name" /><br />
+                    Name: <input type="text" name="Org_Name" width="wide"/><br />
                     Code: <input type="text" name="Org_Code" /> Note: This should go through the entire db and change this code everywhere<br />
                     <input type="checkbox" name="Active" value="Yes" checked="checked" /> Active
                 </fieldset>
 
                 <fieldset>
                     <legend>Physical Address</legend>
-                    Address: <input type="text" name="Physical_Address_Line_1" /><br />
-                    Second Line: <input type="text" name="Physical_Address_Line_2" /><br />
-                    City:<input type="text" name="Physical_City" /><br />
-                    State:<input type="text" name="Physical_State_Code" /><br />
+
+                    Address <input label="Address" type="text" name="Physical_Address_Line_1" /><br />
+                    Second Line <input type="text" name="Physical_Address_Line_2" /><br />
+                    City <input type="text" name="Physical_City" /><br />
+                    State <input type="text" name="Physical_State_Code" /><br />
                     Zip Code:<input type="text" name="Physical_Zip_Code" /><br />
+
                 </fieldset>
 
                 <fieldset>
                     <legend>Mailing Address</legend>
-                    Address: <input type="text" name="Mailing_Address_Line_1" /><br />
-                    Second Line: <input type="text" name="Mailing_Address_Line_2" /><br />
-                    City:<input type="text" name="Mailing_City" /><br />
-                    State:<input type="text" name="Mailing_State" /><br />
-                    Zip Code:<input type="text" name="Mailing_Zip_Code" /><br />
+                    Address <input type="text" name="Mailing_Address_Line_1" /><br />
+                    Second Line <input type="text" name="Mailing_Address_Line_2" /><br />
+                    City <input type="text" name="Mailing_City" /><br />
+                    State <input type="text" name="Mailing_State" /><br />
+                    Zip Code <input type="text" name="Mailing_Zip_Code" /><br />
                 </fieldset>
 
                 <fieldset>
@@ -65,7 +64,7 @@
                     Phone <input type="tel" name="" /><br />
                     Fax <input type="tel" name="Fax" /><br />
                 </fieldset>
-                
+
                 <fieldset>
                     <legend>Notes</legend>
                     <textarea rows="5" cols="60" wrap="physical" name="Notes"/></textarea><br />
@@ -78,25 +77,22 @@
                 </fieldset>
             </div>
             <div id="bottom">
-            <fieldset>
-                <input type="submit" value="Back">  - todo: return to org homepage
-                <input type="submit" value="Save">
-            </fieldset>
-                </div>
+                <fieldset>
+                    <input type="submit" value="Back">  - todo: return to org homepage
+                    <input type="submit" value="Save">
+                </fieldset>
+            </div>
         </fieldset>
 
     </form>
 
     <!--TODO: Build footer-->
     <footer>
-         
-        
+
+
     </footer>
-    
-<?php 
-    
 
-
-?>
+    <?php
+    ?>
 
 </html>

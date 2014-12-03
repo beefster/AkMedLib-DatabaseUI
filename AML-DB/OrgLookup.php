@@ -39,7 +39,7 @@ Include buttons for add, edit, and delete
         <fieldset>
             
             <?php 
-            
+                //TODO: Organization info goes here, if queried? Or add a "OrgView" page?
                 //TODO: Do necessary query based on form input
             
             

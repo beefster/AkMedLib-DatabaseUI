@@ -30,18 +30,19 @@ em {
     font-style: normal;
 }
 
-input {
-    width: 250px;
+input, text {
+    text-align: left;
+    margin-left: 2em;
+    //display: block;
+    //float: left;
 }
 
 input {
-    width: 64px;
-    
 }
 
 div{
-    column-count: 3;
-    -moz-column-count: 3; /* Firefox */
+    column-count: 2;
+    -moz-column-count: 2; /* Firefox */
 }
 
 label {
