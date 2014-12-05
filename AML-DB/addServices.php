@@ -111,11 +111,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     <p>Quantity Filled: <input type="text" name="quantityFilled" size="25" value="<?php if (isset($_POST['quantityFilled'])) echo $_POST['quantityFilled']; ?>"></p>
                     <p>Unit Price:      <input type="double" name="unitPrice" size="25" value="<?php if (isset($_POST['unitPrice'])) echo $_POST['unitPrice']; ?>"></p>
                     <p>Total:           <input type="text" name="total" size="25" value="<?php if (isset($_POST['total'])) echo $_POST['total']; ?>"></p>
-                    <p>Paid:            <select name="paid" size ="2">
-                            <option name="paid" value="<?php if (isset($_POST['Yes'])) echo $_POST['Yes']; ?>">Yes</option>
-                            <option name="paid" value="<?php if (isset($_POST['No'])) echo $_POST['No']; ?>">No</option>
-                        </select></p>
-                    <p>Date Entered:    <input type="date" name="dateEntered" size="25" value="<?php if (isset($_POST['dateEntered'])) echo $_POST['dateEntered']; ?>"></p>
+                    <p>Paid:            <input type="radio" name="paid" size = "25"
+<?php if (isset($_POST['paid'])) echo "checked"; ?> value = "yes"> Yes   <input type="radio" name="paid" size = "25"
+<?php if (isset($_POST['paid'])) echo "checked"; ?> value = "no"> No   </p>
+ <p>Date Entered:    <input type="date" name="dateEntered" size="25" value="<?php if (isset($_POST['dateEntered'])) echo $_POST['dateEntered']; ?>"></p>
                     <p><input type="submit" value="Add Record"></p>
                 </fieldset>
             </div>
