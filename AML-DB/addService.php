@@ -115,17 +115,61 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
   </tr>
   <tr>
     <td>Identifier:</td>
-    <td><select name="Identifier" id="Identifier">
-      <option>&lt;?php if (isset($_POST['identifier'])) echo $_POST['identifier']; ?&gt;</option>
-    </select></td>
+    <td><?php 
+
+require( '../connect_mldb.php' ) ;
+
+function show_Identifiers( $dbc )
+{
+  $q = 'SELECT * FROM services' ;
+  $r = mysqli_query( $dbc , $q ) ;
+  $num = mysqli_num_rows( $r ) ;
+   if ( $num > 0 )
+  {
+  	echo "<select name='identifier'>";
+	
+  	while ( $row = mysqli_fetch_array( $r , MYSQLI_ASSOC ) ) 
+     {
+     	echo "<option value='" . $row['identifier'] . "'>" . $row['identifier'] . "</option>";
+      }
+      echo "</select>";
+  } else { }
+}
+
+show_Identifiers($dbc) ;
+
+mysqli_close( $dbc ) ;
+?></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
   <tr>
     <td>Service Code:</td>
-    <td><select name="select2" id="select2">
-      <option>&lt;?php if (isset($_POST['serviceCode'])) echo $_POST['serviceCode']; ?&gt;</option>
-    </select></td>
+    <td><?php 
+
+require( '../connect_mldb.php' ) ;
+
+function show_ServiceCodes( $dbc )
+{
+  $q = 'SELECT * FROM services' ;
+  $r = mysqli_query( $dbc , $q ) ;
+  $num = mysqli_num_rows( $r ) ;
+   if ( $num > 0 )
+  {
+  	echo "<select name='servicecodes'>";
+	
+  	while ( $row = mysqli_fetch_array( $r , MYSQLI_ASSOC ) ) 
+     {
+     	echo "<option value='" . $row['servicecodes'] . "'>" . $row['sercvicecodes'] . "</option>";
+      }
+      echo "</select>";
+  } else { }
+}
+
+show_Identifiers($dbc) ;
+
+mysqli_close( $dbc ) ;
+?></td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
   </tr>
