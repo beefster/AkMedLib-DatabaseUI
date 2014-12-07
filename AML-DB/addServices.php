@@ -1,7 +1,6 @@
 <?php
 $page_title = 'Services';
 
-
 if ($_SERVER['REQUEST_METHOD'] == 'POST') {
     require ('../connect_db.php');
 
