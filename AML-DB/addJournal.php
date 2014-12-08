@@ -29,7 +29,7 @@
   </tr>
 </table>
 <form id="form2" name="form2" method="post" action="">
-  <input type="submit" name="Save Journel" id="Save Journel" value="Save Journel" />
+  <input type="submit" name="Save Journal" id="Save Journal" value="Save Journal" />
 </form>
 <p>&nbsp;</p>
 </body>

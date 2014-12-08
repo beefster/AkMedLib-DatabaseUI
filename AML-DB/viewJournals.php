@@ -35,10 +35,13 @@
     </select></td>
   </tr>
 </table>
+
+<!Submit Buttons>
+
 <form id="form2" name="form2" method="post" action="">
-  <input type="submit" name="Edit Journel" id="Edit Journel" value="Edit Journel" />
-  <input type="submit" name="addnewjournel" id="addnewjournel" value="Add New Journel" />
-  <input type="submit" name="deletejournel" id="deletejournel" value="Delete Journel" />
+  <input type="submit" name="editJournal" id="editJournal" value="editJournal" />
+  <input type="submit" name="addJournal" id="addJournal" value="addJournal" />
+  <input type="submit" name="deleteJournal" id="deletejournal" value="deleteJournal" />
 </form>
 <p>&nbsp;</p>
 </body>

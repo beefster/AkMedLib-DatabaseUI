@@ -83,6 +83,7 @@
   </tr>
 </table>
 <p>
+  <input type="submit" name="back" id="back" value="Back" />
   <input type="submit" name="savesearchlog" id="savesearchlog" value="Save Search Log" />
 </p>
 </body>

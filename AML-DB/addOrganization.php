@@ -8,7 +8,7 @@
 <body>
 <p><em><strong>Add New Organization</strong></em> </p>
 <p>&nbsp;</p>
-<table width="746" border="0" cellspacing="2" cellpadding="2">
+<table width="800" border="0" cellspacing="2" cellpadding="2">
   <tr>
     <td>Organization Code:</td>
     <td><input type="text" name="orgcode" id="orgcode" /></td>
