@@ -10,7 +10,7 @@
 
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        require ('../connect_db.php');
+        require ('../connect_mldb.php');
 
         $errors = array();
 
