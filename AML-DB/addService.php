@@ -8,9 +8,10 @@
     <?php
     $page_title = 'Services';
 
+    
 
     if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-        require ('../connect_mldb.php');
+        require ('connect_mldb.php');
 
         $errors = array();
 
@@ -116,7 +117,7 @@
             <tr>
                 <td>Identifier:</td>
                 <td><?php
-                    require( '../connect_mldb.php' );
+                    require( 'connect_mldb.php' );
 
                     function show_Identifiers($dbc) {
                         $q = 'SELECT * FROM services';
@@ -144,7 +145,7 @@
             <tr>
                 <td>Service Code:</td>
                 <td><?php
-                    require( '../connect_mldb.php' );
+                    require( 'connect_mldb.php' );
 
                     function show_ServiceCodes($dbc) {
                         $q = 'SELECT * FROM services';
